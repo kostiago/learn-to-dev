@@ -8,7 +8,12 @@ INSERT INTO tb_user (name, email, password) VALUES ('Ana Costa', 'ana.costa@emai
 INSERT INTO tb_role (authority) VALUES ('ROLE_USER'), ('ROLE_INSTRUCTOR'), ('ROLER_ADMIN');
 
 -- Inserindo permissões aos usuarioas na tb_user_role
-
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+-- Inserindo cursos na tb_course
+INSERT INTO tb_course(name, img_uri, img_gray_uri) VALUES ('HTML sintaxe', 'batata', 'banana');
+
+-- Inserindo ofertas de cursos na tb_offer
+INSERT INTO tb_offer(edition, start_moment, end_moment, course_id) VALUES('1.0',  NOW(), NOW(), 1);
